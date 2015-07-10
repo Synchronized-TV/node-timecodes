@@ -1,0 +1,37 @@
+{
+  "name": "node-timecodes",
+  "version": "0.0.1",
+  "description": "Time and SMTPE Timecodes conversions",
+  "license": "MIT",
+  "repository": "revolunet/node-timecodes",
+  "author": {
+    "name": "Julien Bouquillon",
+    "email": "julien@bouquillon.com",
+    "url": "http://github.com/revolunet"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "readme": "node ./node_modules/node-readme/.bin/node-readme.js",
+    "test": "./node_modules/babel-tape-runner/bin/babel-tape-runner spec/**/*.spec.js | ./node_modules/.bin/tap-spec",
+    "build": "babel -d ./dist ./src"
+  },
+  "main": "dist/index.js",
+  "keywords": [
+    "node",
+    "timecode",
+    "smtpe",
+    "time",
+    "conversion"
+  ],
+  "dependencies": {
+    "es6-template-strings": "1.0.0"
+  },
+  "devDependencies": {
+    "babel-tape-runner": "1.1.0",
+    "tap-spec": "4.0.2",
+    "tape": "4.0.0",
+    "node-readme": "0.1.3"
+  }
+}
