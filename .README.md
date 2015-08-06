@@ -16,13 +16,15 @@ references :
 ```js
 npm i -s node-timecode
 
-
 var timecodes = require('node-timecodes');
 
-timecodes.toSeconds('01:10:31:00');
-//
+timecodes.toSeconds('00:23:47:10'); // -> 1427.4
 
+timecodes.fromSeconds(1427.4); // -> '00:23:47:10'
 
+timecodes.fromSeconds(1427.4, 29.97); // -> '00:23:47:10'
+
+```
 
 ## Scripts
 

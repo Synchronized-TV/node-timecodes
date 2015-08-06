@@ -18,7 +18,7 @@ function padNumber(nb) {
 exports['default'] = {
 
     /** converts time to timecode */
-    toTimecode: function toTimecode(seconds) {
+    fromSeconds: function fromSeconds(seconds) {
         var frameRate = arguments.length <= 1 || arguments[1] === undefined ? defaultFramerate : arguments[1];
 
         if (isNaN(seconds)) {
@@ -37,7 +37,7 @@ exports['default'] = {
     },
 
     /* converts timecode to time */
-    toTime: function toTime(timecode) {
+    toSeconds: function toSeconds(timecode) {
         var frameRate = arguments.length <= 1 || arguments[1] === undefined ? defaultFramerate : arguments[1];
 
         if (!TIMECODE_REGEXP.test(timecode)) {
