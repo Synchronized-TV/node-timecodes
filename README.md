@@ -14,7 +14,7 @@ references :
 ## Usage
 
 ```js
-npm i -s node-timecode
+npm i -s node-timecodes
 
 var timecodes = require('node-timecodes');
 
