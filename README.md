@@ -22,7 +22,8 @@ timecodes.toSeconds('00:23:47:10'); // -> 1427.4
 
 timecodes.fromSeconds(1427.4); // -> '00:23:47:10'
 
-timecodes.fromSeconds(1427.4, 29.97); // -> '00:23:47:10'
+// you can use a specific frameRate
+timecodes.fromSeconds(1427.4, 29.97); // -> '00:23:47:11'
 
 ```
 
