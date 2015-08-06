@@ -1,6 +1,6 @@
 {
   "name": "node-timecodes",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Time and SMTPE Timecodes conversions",
   "license": "MIT",
   "repository": "Synchronized-TV/node-timecodes",
