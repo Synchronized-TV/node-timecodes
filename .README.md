@@ -11,6 +11,18 @@ references :
 
 ## Features
 
+## Usage
+
+```js
+npm i -s node-timecode
+
+
+var timecodes = require('node-timecodes');
+
+timecodes.toSeconds('01:10:31:00');
+//
+
+
 
 ## Scripts
 

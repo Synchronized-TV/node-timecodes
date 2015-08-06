@@ -16,7 +16,7 @@ function padNumber(nb) {
 export default {
 
     /** converts time to timecode */
-    toTimecode: function toTimecode(seconds, frameRate=defaultFramerate) {
+    fromSeconds: function fromSeconds(seconds, frameRate=defaultFramerate) {
         if (isNaN(seconds)) {
             throw new Error('seconds should be a number');
         }
@@ -33,7 +33,7 @@ export default {
     },
 
     /* converts timecode to time */
-    toTime: function toTime(timecode, frameRate=defaultFramerate) {
+    toSeconds: function toSeconds(timecode, frameRate=defaultFramerate) {
         if (!TIMECODE_REGEXP.test(timecode)) {
             throw new Error('invalid timecode : ' + timecode);
         }
