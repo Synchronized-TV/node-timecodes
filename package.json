@@ -1,19 +1,19 @@
 {
   "name": "node-timecodes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Time and SMTPE Timecodes conversions",
   "license": "MIT",
-  "repository": "revolunet/node-timecodes",
+  "repository": "Synchronized-TV/node-timecodes",
   "author": {
     "name": "Julien Bouquillon",
-    "email": "julien@bouquillon.com",
-    "url": "http://github.com/revolunet"
+    "email": "julien.bouquillon@synchronized.tv",
+    "url": "http://github.com/Synchronized-TV"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "readme": "node ./node_modules/node-readme/.bin/node-readme.js",
+    "readme": "node ./node_modules/.bin/node-readme",
     "test": "./node_modules/babel-tape-runner/bin/babel-tape-runner spec/**/*.spec.js | ./node_modules/.bin/tap-spec",
     "build": "babel -d ./dist ./src"
   },
@@ -25,13 +25,26 @@
     "time",
     "conversion"
   ],
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/5..latest",
+      "ipad/5..latest",
+      "android-browser/2..latest"
+    ]
+  },
   "dependencies": {
     "es6-template-strings": "1.0.0"
   },
   "devDependencies": {
     "babel-tape-runner": "1.1.0",
+    "node-readme": "0.1.8",
     "tap-spec": "4.0.2",
-    "tape": "4.0.0",
-    "node-readme": "0.1.3"
+    "tape": "4.0.0"
   }
 }
