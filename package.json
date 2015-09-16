@@ -18,6 +18,10 @@
     "build": "babel -d ./dist ./src"
   },
   "main": "dist/index.js",
+  "bin": {
+    "timecodeFromSeconds": "dist/fromSeconds.js",
+    "timecodeToSeconds": "dist/toSeconds.js"
+  },
   "keywords": [
     "node",
     "timecode",

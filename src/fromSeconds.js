@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 'use strict';
 
 import { defaultFramerate } from './constants';
@@ -10,7 +11,7 @@ function padNumber(nb) {
 }
 
 /* converts time to timecode */
-export default (seconds, frameRate = defaultFramerate) => {
+function fromSeconds(seconds, frameRate = defaultFramerate) {
   if (isNaN(seconds)) {
     throw new Error('seconds should be a number');
   }
@@ -24,4 +25,14 @@ export default (seconds, frameRate = defaultFramerate) => {
   frame = Math.floor(Math.round(ms / (1 / frameRate) * 100) / 100);
 
   return padNumber(hours) + ':' + padNumber(mins) + ':' + padNumber(secs) + ':' + padNumber(frame);
-};
+}
+
+export default fromSeconds;
+
+if (require.main === module) {
+  if (process.argv.length < 3) {
+    console.log('USAGE: timecodeFromSeconds seconds [frameRate]');
+    throw 'No seconds parameter found';
+  }
+  console.log(fromSeconds(process.argv[2], process.argv[3]));
+}
