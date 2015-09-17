@@ -13,9 +13,9 @@ references :
 
 ## Usage
 
-```js
-npm i -s node-timecodes
+Install with `npm i -s node-timecodes`
 
+```js
 var timecodes = require('node-timecodes');
 
 timecodes.toSeconds('00:23:47:10'); // -> 1427.4
@@ -25,6 +25,16 @@ timecodes.fromSeconds(1427.4); // -> '00:23:47:10'
 // you can use a specific frameRate
 timecodes.fromSeconds(1427.4, 29.97); // -> '00:23:47:11'
 
+```
+
+Run as CLI :
+
+```sh
+$ timecodeFromSeconds 1427.4
+# 00:23:47:10
+
+$ timecodeToSeconds 00:23:47:10
+# 1427.4
 ```
 
 ## Scripts
