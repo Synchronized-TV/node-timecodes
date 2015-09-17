@@ -18,6 +18,10 @@
     "build": "babel -d ./dist ./src"
   },
   "main": "dist/index.js",
+  "bin": {
+    "timecodeFromSeconds": "dist/fromSeconds.js",
+    "timecodeToSeconds": "dist/toSeconds.js"
+  },
   "keywords": [
     "node",
     "timecode",
@@ -45,6 +49,8 @@
     "babel-tape-runner": "1.1.0",
     "node-readme": "0.1.8",
     "tap-spec": "4.0.2",
-    "tape": "4.0.0"
+    "tape": "4.0.0",
+    "babel-eslint": "4.0.5",
+    "eslint": "0.24.1"
   }
 }
