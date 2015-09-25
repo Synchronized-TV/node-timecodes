@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+
 'use strict';
 
 import { defaultFramerate } from './constants';
@@ -28,11 +29,3 @@ function fromSeconds(seconds, frameRate = defaultFramerate) {
 }
 
 export default fromSeconds;
-
-if (require.main === module) {
-  if (process.argv.length < 3) {
-    console.log('USAGE: timecodeFromSeconds seconds [frameRate]');
-    throw 'No seconds parameter found';
-  }
-  console.log(fromSeconds(process.argv[2], process.argv[3]));
-}

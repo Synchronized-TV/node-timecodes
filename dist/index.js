@@ -1,12 +1,12 @@
 'use strict';
 
-/* simple timecode<->time conversion */
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+/* simple timecode<->time conversion */
 
 var _fromSeconds = require('./fromSeconds');
 

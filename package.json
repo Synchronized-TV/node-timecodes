@@ -19,8 +19,8 @@
   },
   "main": "dist/index.js",
   "bin": {
-    "timecodeFromSeconds": "dist/fromSeconds.js",
-    "timecodeToSeconds": "dist/toSeconds.js"
+    "timecodeFromSeconds": "dist/fromSeconds-bin.js",
+    "timecodeToSeconds": "dist/toSeconds-bin.js"
   },
   "keywords": [
     "node",

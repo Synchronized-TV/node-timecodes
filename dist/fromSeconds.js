@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 
+
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -35,12 +36,4 @@ function fromSeconds(seconds) {
 }
 
 exports['default'] = fromSeconds;
-
-if (require.main === module) {
-  if (process.argv.length < 3) {
-    console.log('USAGE: timecodeFromSeconds seconds [frameRate]');
-    throw 'No seconds parameter found';
-  }
-  console.log(fromSeconds(process.argv[2], process.argv[3]));
-}
 module.exports = exports['default'];

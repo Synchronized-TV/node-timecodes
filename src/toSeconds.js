@@ -1,4 +1,3 @@
-#! /usr/bin/env node
 'use strict';
 
 import { defaultFramerate } from './constants';
@@ -19,11 +18,3 @@ function toSeconds(timecode, frameRate = defaultFramerate){
 }
 
 export default toSeconds;
-
-if (require.main === module) {
-  if (process.argv.length < 3) {
-    console.log('USAGE: timecodeToSeconds timecode [frameRate]');
-    throw 'No timecode parameter found';
-  }
-  console.log(toSeconds(process.argv[2], process.argv[3]));
-}
