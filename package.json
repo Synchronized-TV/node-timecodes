@@ -42,9 +42,6 @@
       "android-browser/2..latest"
     ]
   },
-  "dependencies": {
-    "es6-template-strings": "1.0.0"
-  },
   "devDependencies": {
     "babel-tape-runner": "1.1.0",
     "tap-spec": "4.0.2",
