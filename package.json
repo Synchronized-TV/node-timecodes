@@ -13,8 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "readme": "node ./node_modules/.bin/node-readme",
-    "test": "./node_modules/babel-tape-runner/bin/babel-tape-runner spec/**/*.spec.js | ./node_modules/.bin/tap-spec",
+    "test": "babel-tape-runner spec/**/*.spec.js | tap-spec",
     "build": "babel -d ./dist ./src"
   },
   "main": "dist/index.js",
@@ -47,7 +46,6 @@
   },
   "devDependencies": {
     "babel-tape-runner": "1.1.0",
-    "node-readme": "0.1.8",
     "tap-spec": "4.0.2",
     "tape": "4.0.0",
     "babel-eslint": "4.0.5",

@@ -9,8 +9,6 @@ references :
  - [Apple cinematools](https://documentation.apple.com/en/cinematools/usermanual/index.html#chapter=2%26section=5%26tasks=true)
  - https://en.wikipedia.org/wiki/SMPTE_timecode
 
-## Features
-
 ## Usage
 
 Install with `npm i -s node-timecodes`
@@ -48,7 +46,6 @@ $ timecodeToSeconds 00:23:47:10
  - **npm run readme** : `node ./node_modules/.bin/node-readme`
  - **npm run test** : `./node_modules/babel-tape-runner/bin/babel-tape-runner spec/**/*.spec.js | ./node_modules/.bin/tap-spec`
  - **npm run build** : `babel -d ./dist ./src`
-
 
 ## Author
 
