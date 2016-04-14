@@ -14,7 +14,8 @@
   },
   "scripts": {
     "test": "babel-tape-runner spec/**/*.spec.js | tap-spec",
-    "build": "babel -d ./dist ./src"
+    "build": "babel -d ./dist ./src",
+    "prepublish": "npm run test && npm run build"
   },
   "main": "dist/index.js",
   "bin": {
