@@ -24,11 +24,7 @@ function fromSeconds(seconds) {
   var _ref$ms = _ref.ms;
   var ms = _ref$ms === undefined ? false : _ref$ms;
 
-  if (isNaN(seconds)) {
-    throw new Error('seconds should be a number');
-  }
-
-  var _seconds = parseFloat(seconds),
+  var _seconds = parseFloat(seconds) || 0,
       milliseconds = Math.round((_seconds - parseInt(_seconds, 10)) * 10000, 10) / 10;
 
   var hours = Math.floor(_seconds / (60 * 60), 10),
