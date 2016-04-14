@@ -13,7 +13,6 @@ test('fromSeconds (SMTPE)', t => {
 
 	const tests = [
 		// using default at 25fps
-		//
 		['00:00:00:00', 0.000225, 25],
 		['00:00:00:00', 0, 25],
 		['00:00:00:01', 0.04, 25],
@@ -45,8 +44,6 @@ test('fromSeconds (SMTPE)', t => {
 
 	];
 
-	//// 359999
-
 	tests.forEach(sample => {
 		const expected = sample[0],
 		actual = fromSeconds(roundTime(sample[1]), {
@@ -63,10 +60,7 @@ test('fromSeconds (SMTPE)', t => {
 
 test('fromSeconds (ms format)', t => {
 
-
 	const tests = [
-		// using default at 25fps
-		//
 		['00:00:00:000', 0.000225],
 		['00:00:00:000', 0],
 		['00:00:00:040', 0.04],
@@ -82,10 +76,9 @@ test('fromSeconds (ms format)', t => {
 		['99:59:59:000', 359999],
 		['99:59:59:400', 359999.4],
 		['99:59:59:980', 359999.98],
-
+		['00:01:19:186', 79.186432]
 	];
 
-	//// 359999
 
 	tests.forEach(sample => {
 		const expected = sample[0],
