@@ -23,8 +23,14 @@ timecodes.toSeconds('00:23:47:10'); // -> 1427.4
 timecodes.fromSeconds(1427.4); // -> '00:23:47:10'
 
 // you can use a specific frameRate
-timecodes.fromSeconds(1427.4, 29.97); // -> '00:23:47:11'
+timecodes.fromSeconds(1427.4, {
+  frameRate: 29.97
+}); // -> '00:23:47:11'
 
+// use ms format for WebVTT timestamps
+timecodes.fromSeconds(1427.4, {
+  ms: true
+}); // -> '00:23:47:400'
 ```
 
 Run as CLI :

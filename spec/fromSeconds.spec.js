@@ -8,7 +8,7 @@ function roundTime(time) {
 }
 
 
-test('fromSeconds', t => {
+test('fromSeconds (SMTPE)', t => {
 
 
 	const tests = [
@@ -49,9 +49,51 @@ test('fromSeconds', t => {
 
 	tests.forEach(sample => {
 		const expected = sample[0],
-		actual = fromSeconds(roundTime(sample[1]), sample[2]);
+		actual = fromSeconds(roundTime(sample[1]), {
+			frameRate: sample[2]
+		});
 
 		t.equal(actual, expected, `${roundTime(sample[1])} -> ${expected} (${sample[2]}fps)`);
+	});
+
+	t.end();
+});
+
+
+
+test('fromSeconds (ms format)', t => {
+
+
+	const tests = [
+		// using default at 25fps
+		//
+		['00:00:00:000', 0.000225],
+		['00:00:00:000', 0],
+		['00:00:00:040', 0.04],
+		['00:00:00:080', 0.08],
+		['00:00:00:400', 0.4],
+		['00:00:01:000', 1],
+		['00:01:01:000', 61],
+		['00:01:01:050', 61.05],
+		['00:01:01:951', 61.951],
+		['01:01:01:000', 3661],
+		['01:10:31:000', 4231],
+		['00:23:47:400', 1427.4],
+		['99:59:59:000', 359999],
+		['99:59:59:400', 359999.4],
+		['99:59:59:980', 359999.98],
+
+	];
+
+	//// 359999
+
+	tests.forEach(sample => {
+		const expected = sample[0],
+		actual = fromSeconds(roundTime(sample[1]), {
+			ms: true
+		});
+
+		t.equal(actual, expected, `${roundTime(sample[1])} -> ${expected}`);
 	});
 
 	t.end();
