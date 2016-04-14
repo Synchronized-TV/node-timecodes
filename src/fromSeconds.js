@@ -11,11 +11,8 @@ function padNumber(nb, length = 2) {
 
 /* converts time to timecode */
 function fromSeconds(seconds, {frameRate = defaultFramerate, ms = false} = {}) {
-  if (isNaN(seconds)) {
-    throw new Error('seconds should be a number');
-  }
 
-  const _seconds = parseFloat(seconds),
+  const _seconds = parseFloat(seconds) || 0,
   milliseconds = Math.round((_seconds - parseInt(_seconds, 10)) * 10000, 10) / 10;
 
   const hours = Math.floor(_seconds / (60 * 60), 10),
