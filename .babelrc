@@ -1,9 +1,3 @@
 {
-  "stage": 0,
-  "optional": [],
-  "env": {
-    "production": {
-      "optional": []
-    }
-  }
+  "presets": ["es2015", "stage-0"]
 }
