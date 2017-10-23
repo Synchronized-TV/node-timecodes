@@ -29,6 +29,10 @@ timecodes.fromSeconds(1427.4, {
 timecodes.fromSeconds(1427.4, {
   ms: true
 }); // -> '00:23:47:400'
+
+// change default framerate to all methods
+timecodes.constants.framerate = 29.97
+timecodes.fromSeconds(1427.4); // -> '00:23:47:11'
 ```
 
 Run as CLI :
@@ -45,7 +49,7 @@ $ timecodeToSeconds 00:23:47:10
 
  - **npm run readme** : `node ./node_modules/.bin/node-readme`
  - **npm run test** : `./node_modules/babel-tape-runner/bin/babel-tape-runner spec/**/*.spec.js | ./node_modules/.bin/tap-spec`
- - **npm run build** : `babel -d ./dist ./src`
+ - **npm run build** : `babel src --out-dir dist`
 
 ## Author
 

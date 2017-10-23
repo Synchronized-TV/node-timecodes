@@ -1,6 +1,6 @@
 'use strict';
 
-import { defaultFramerate } from './constants';
+import { framerate as defaultFramerate } from './constants';
 
 const TIMECODE_REGEXP = /\d+\:\d+\:\d+\:\d+/;
 
