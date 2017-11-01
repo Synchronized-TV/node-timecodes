@@ -1,5 +1,5 @@
 'use strict';
 
 export default {
-  defaultFramerate: 25
+  framerate: 25
 };

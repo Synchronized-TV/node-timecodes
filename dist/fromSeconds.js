@@ -1,13 +1,13 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 var _constants = require('./constants');
 
 function padNumber(nb) {
-  var length = arguments.length <= 1 || arguments[1] === undefined ? 2 : arguments[1];
+  var length = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
 
   while (('' + nb).length < length) {
     nb = '0' + nb;
@@ -17,12 +17,11 @@ function padNumber(nb) {
 
 /* converts time to timecode */
 function fromSeconds(seconds) {
-  var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-  var _ref$frameRate = _ref.frameRate;
-  var frameRate = _ref$frameRate === undefined ? _constants.defaultFramerate : _ref$frameRate;
-  var _ref$ms = _ref.ms;
-  var ms = _ref$ms === undefined ? false : _ref$ms;
+  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      _ref$frameRate = _ref.frameRate,
+      frameRate = _ref$frameRate === undefined ? _constants.framerate : _ref$frameRate,
+      _ref$ms = _ref.ms,
+      ms = _ref$ms === undefined ? false : _ref$ms;
 
   var _seconds = parseFloat(seconds) || 0,
       milliseconds = Math.round((_seconds - parseInt(_seconds, 10)) * 10000, 10) / 10;
@@ -37,5 +36,5 @@ function fromSeconds(seconds) {
   return padNumber(hours) + ':' + padNumber(mins) + ':' + padNumber(secs) + ':' + suffix;
 }
 
-exports['default'] = fromSeconds;
+exports.default = fromSeconds;
 module.exports = exports['default'];

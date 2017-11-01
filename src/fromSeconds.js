@@ -1,6 +1,6 @@
 'use strict';
 
-import { defaultFramerate } from './constants';
+import { framerate as defaultFramerate} from './constants';
 
 function padNumber(nb, length = 2) {
   while ((''+nb).length < length) {
