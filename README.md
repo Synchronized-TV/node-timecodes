@@ -47,13 +47,12 @@ $ timecodeToSeconds 00:23:47:10
 
 ## Scripts
 
- - **npm run readme** : `node ./node_modules/.bin/node-readme`
  - **npm run test** : `./node_modules/babel-tape-runner/bin/babel-tape-runner spec/**/*.spec.js | ./node_modules/.bin/tap-spec`
  - **npm run build** : `babel src --out-dir dist`
 
 ## Author
 
-Julien Bouquillon <julien.bouquillon@synchronized.tv> http://github.com/Synchronized-TV
+[Synchronized team](http://github.com/Synchronized-TV) and [awesome contributors](https://github.com/Synchronized-TV/node-timecodes/graphs/contributors)
 
 ## License
 
